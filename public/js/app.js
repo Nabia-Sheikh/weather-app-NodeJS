@@ -23,7 +23,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     const val = inp.value
 
-    fetch(`http://localhost:8080/api/weather?address=${val}`).then
+    fetch(`/api/weather?address=${val}`).then
     (res=>res.json().then(data=>{
         if(!val){
             error.style.display ="block"

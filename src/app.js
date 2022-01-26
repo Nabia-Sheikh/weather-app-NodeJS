@@ -4,6 +4,8 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 
+const PORT = process.env.PORT || 8080
+
 const app = express()
 app.set("view engine", "hbs")
 
@@ -45,7 +47,7 @@ app.get("/api/weather",(req,res)=>{
 
 
 
-app.listen(8080)
+app.listen(PORT , ()=>console.log(`Server is running on ${PORT}`))
 
 
 
